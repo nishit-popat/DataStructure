@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 /*
 Given a string of balanced expression, find if it contains a redundant parenthesis or not.
 A set of parenthesis are redundant if same sub-expression is surrounded by unnecessary or multiple brackets. Print ‘Yes’ if redundant else ‘No’.
@@ -22,13 +24,13 @@ public class RedundantBracket {
 
     public static void main(String[] args) {
         String str = "((a+b))";
-        System.out.println(findRedundant(str));
+        System.out.println(checkRedundancy(str));
  
         str = "(a+(b)/c)";
-        System.out.println(findRedundant(str));
+        System.out.println(checkRedundancy(str));
  
         str = "(a+b*(c-d))";
-        System.out.println(findRedundant(str));
+        System.out.println(checkRedundancy(str));
     }
     private static boolean checkRedundancy(String s){
         
