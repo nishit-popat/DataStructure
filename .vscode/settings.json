@@ -1,0 +1,8 @@
+{
+    "java.project.sourcePaths": [
+        "Array",
+        "Stack"
+    ],
+    "editor.fontFamily": "Source Code Pro Semibold, 'Source Code Pro Black', monospace",
+    "terminal.integrated.fontFamily": "Source Code Pro Semibold, 'Source Code Pro Black', monospace"
+}
