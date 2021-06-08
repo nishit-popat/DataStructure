@@ -37,28 +37,38 @@ public class MaxProductSubArray {
     }
 
     private static long maxProduct(int[] arr, int n) {
-        long overallProduct = (long)arr[0];
-        long currentMaxProduct = (long)arr[0];
-        long currentMinProduct = (long)arr[0];
+        long overallProduct = (long)arr[0]; // to keep track of overall maximum product
+        long currentMaxProduct = (long)arr[0]; // to keep track of current maximum product
+        long currentMinProduct = (long)arr[0]; // to keep track of current minimum product
+
         for (int i = 1; i < n; i++) {
+            // if current element is 0 then we have to start again and all our previous current will 
+            // have to initialize from 1.
             if (arr[i] == 0) {
                 currentMaxProduct = 1;
                 currentMinProduct = 1;
                 continue;
             }
 
+            // here temp will save current max because it will gonna change after maximum of three call
             long temp = currentMaxProduct;
-            currentMaxProduct = maximumOfThree(arr[i], arr[i] * currentMaxProduct, arr[i] * currentMinProduct);
+            // find current max from arr[i], arr[i]*currentMaxProduct and arr[i]*currentMinProduct
+            currentMaxProduct = maximumOfThree(arr[i], arr[i] * currentMaxProduct, 
+            arr[i] * currentMinProduct);
+            // find current min from arr[i], arr[i]*temp(current Max) and arr[i]*currentMinProduct
             currentMinProduct = minimumOfThree(arr[i], arr[i] * temp, arr[i] * currentMinProduct);
 
+            // if overallProduct is less then currentMaxProduct then update it
             if(overallProduct < currentMaxProduct){
                 overallProduct = currentMaxProduct;
             }
 
         }
+        // return the overall product
         return overallProduct;
     }
 
+    // return maximum of three numbers
     private static long maximumOfThree(long i, long j, long k) {
 
         if (i >= j && i >= k) {
@@ -71,6 +81,7 @@ public class MaxProductSubArray {
         
     }
 
+    // return minimum of three numbers
     private static long minimumOfThree(long i, long j, long k) {
         if (i < j && i < k) {
             return i;
