@@ -41,6 +41,8 @@ public class LongestConsequtiveSubSequence {
             arr[i] = scan.nextInt();
         }
 
+        scan.close();
+
         HashMap<Integer, Boolean> map = new HashMap<>();
         for(int val:arr){   
             map.put(val, true);
