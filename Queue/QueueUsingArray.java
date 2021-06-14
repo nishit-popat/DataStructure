@@ -1,122 +1,93 @@
-// Java program to implement a queue using an array
-class Queue {
-	private static int front, rear, capacity;
-	private static int queue[];
-
-	Queue(int c)
-	{
-		front = rear = 0;
-		capacity = c;
-		queue = new int[capacity];
-	}
-
-	// function to insert an element
-	// at the rear of the queue
-	void queueEnqueue(int data)
-	{
-		// check queue is full or not
-		if (capacity == rear) {
-			System.out.printf("\nQueue is full\n");
-			return;
-		}
-
-		// insert element at the rear
-		else {
-			queue[rear] = data;
-			rear++;
-		}
-		return;
-	}
-
-	// function to delete an element
-	// from the front of the queue
-	void queueDequeue()
-	{
-		// if queue is empty
-		if (front == rear) {
-			System.out.printf("\nQueue is empty\n");
-			return;
-		}
-
-		// shift all the elements from index 2 till rear
-		// to the right by one
-		else {
-			for (int i = 0; i < rear - 1; i++) {
-				queue[i] = queue[i + 1];
-			}
-
-			// store 0 at rear indicating there's no element
-			if (rear < capacity)
-				queue[rear] = 0;
-
-			// decrement rear
-			rear--;
-		}
-		return;
-	}
-
-	// print queue elements
-	void queueDisplay()
-	{
-		int i;
-		if (front == rear) {
-			System.out.printf("\nQueue is Empty\n");
-			return;
-		}
-
-		// traverse front to rear and print elements
-		for (i = front; i < rear; i++) {
-			System.out.printf(" %d <-- ", queue[i]);
-		}
-		return;
-	}
-
-	// print front of queue
-	void queueFront()
-	{
-		if (front == rear) {
-			System.out.printf("\nQueue is Empty\n");
-			return;
-		}
-		System.out.printf("\nFront Element is: %d", queue[front]);
-		return;
-	}
-}
+import java.io.*;
 
 public class QueueUsingArray {
 
-	// Driver code
-	public static void main(String[] args)
-	{
-		// Create a queue of capacity 4
-		Queue q = new Queue(4);
+  public static class CustomQueue {
+    int[] data;
+    int front;
+    int size;
 
-		// print Queue elements
-		q.queueDisplay();
+    public CustomQueue(int cap) {
+      data = new int[cap];
+      front = 0;
+      size = 0;
+    }
 
-		// inserting elements in the queue
-		q.queueEnqueue(20);
-		q.queueEnqueue(30);
-		q.queueEnqueue(40);
-		q.queueEnqueue(50);
+    int size() {
+      return size;
+    }
 
-		// print Queue elements
-		q.queueDisplay();
+    void display() {
+      for(int i = 0; i < size; i++){
+        int idx = (front + i) % data.length;
+        System.out.print(data[idx] + " ");
+      }
+      System.out.println();
+    }
 
-		// insert element in the queue
-		q.queueEnqueue(60);
+   
+    void add(int val) {
+      if(size == data.length){
+        System.out.println("Queue overflow");
+      } else {
+        int idx = (front + size) % data.length;
+        data[idx] = val;
+        size++;
+      }
+    }
 
-		// print Queue elements
-		q.queueDisplay();
+    int remove() {
+      if(size == 0){
+        System.out.println("Queue underflow");
+        return -1;
+       } else {
+        int val = data[front];
 
-		q.queueDequeue();
-		q.queueDequeue();
-		System.out.printf("\n\nafter two node deletion\n\n");
+        front = (front + 1) % data.length;
+        size--;
 
-		// print Queue elements
-		q.queueDisplay();
+        return val;
+       }
+    }
 
-		// print front of the queue
-		q.queueFront();
-	}
+    int peek() {
+       if(size == 0){
+        System.out.println("Queue underflow");
+        return -1;
+       } else {
+        int val = data[front];
+        return val;
+       }
+    }
+  }
+
+  public static void main(String[] args) throws Exception {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    int n = Integer.parseInt(br.readLine());
+    CustomQueue qu = new CustomQueue(n);
+
+    qu.add(10);
+	qu.add(20);
+	qu.add(30);
+
+	qu.display();
+
+	qu.remove();
+	qu.display();
+
+	qu.peek();
+	qu.add(40);
+	qu.add(50);
+	qu.add(60);
+	qu.add(70);
+
+
+	qu.remove();
+	qu.display();
+
+	qu.add(80);
+
+	qu.display();
+
+  }
 }
