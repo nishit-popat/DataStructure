@@ -13,3 +13,7 @@ https://practice.geeksforgeeks.org/problems/generate-binary-numbers-1587115620/1
 4. Deque Implementations : (Importan!)
 https://practice.geeksforgeeks.org/problems/deque-implementations/1/?category[]=Queue&category[]=Queue&page=1&query=category[]Queuepage1category[]Queue
 --> Dequeue gfg Article : https://www.geeksforgeeks.org/deque-interface-java-example/
+
+5. Queue using two Stacks :
+https://practice.geeksforgeeks.org/problems/queue-using-two-stacks/1/?category[]=Queue&category[]=Queue&page=1&query=category[]Queuepage1category[]Queue#
+
