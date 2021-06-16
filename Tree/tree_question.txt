@@ -1,0 +1,12 @@
+Questions that I have solved on gfg will come here :
+
+1. Size Of Binary Tree :
+https://practice.geeksforgeeks.org/problems/size-of-binary-tree/1
+
+2. Generic Tree Constructor :
+In this problem you have given array of euler path or tree and you have to create tree from it.
+https://www.youtube.com/watch?v=9Oi3WamOCPo&list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_&index=2
+
+3. Binary Tree Constructor :
+I have solved in this repo as well.
+https://www.youtube.com/watch?v=XV1ADVV6FbQ&list=PL-Jc9J83PIiHYxUk8dSu2_G7MR1PaGXN4&index=2
