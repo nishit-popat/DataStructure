@@ -68,7 +68,7 @@ public class DoubleStack {
         }
         else{
             int x = stackarray[top2];
-            top2--;
+            top2++;
             return x;
         }
     }
