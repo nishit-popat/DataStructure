@@ -1,10 +1,11 @@
 {
     "java.project.sourcePaths": [
         "Tree",
+        "String",
         "Stack",
         "Queue",
         "Array",
-        "String"
+        "Linked List"
     ],
     "editor.fontFamily": "Source Code Pro Semibold, 'Source Code Pro Black', monospace",
     "terminal.integrated.fontFamily": "Source Code Pro Semibold, 'Source Code Pro Black', monospace"
