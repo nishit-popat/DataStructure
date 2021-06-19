@@ -137,6 +137,36 @@ public class SinglyLinkedList {
             }
         }
 
+        private Node getNodeAt(int index){
+            if(size == 0){
+                return null;
+            }
+            Node temp = head;
+            while(index>0){
+                temp = temp.next;
+                index--;
+            }
+            return temp;
+        }
+
+
+        void reverseIteratively(){
+            int left = 0;
+            int right = size-1;
+
+            while(left < right){
+                Node leftNode = getNodeAt(left);
+                Node rightNode = getNodeAt(right);
+
+                int temp = leftNode.data;
+                leftNode.data = rightNode.data;
+                rightNode.data = temp;
+
+                left++;
+                right--;
+            }
+        }   
+
     }
 
     public static void main(String[] args) {
@@ -146,6 +176,9 @@ public class SinglyLinkedList {
         list.addLast(20);
         list.addLast(30);
 
+        list.display();
+
+        list.reverseIteratively();
         list.display();
     }
 }
