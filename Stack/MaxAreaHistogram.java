@@ -19,7 +19,7 @@ public class MaxAreaHistogram {
 
     private static int getMaxArea(int[] arr, int length) {
 
-        int[] rb = new int[arr.length]; // next smallest element on right
+        int[] rb = new int[arr.length]; // next smallest element's index on right
         Stack<Integer> st = new Stack<>();
     
         st.push(arr.length - 1); 
@@ -37,7 +37,7 @@ public class MaxAreaHistogram {
           st.push(i);
         }
     
-        int[] lb = new int[arr.length]; // next smallest element on left
+        int[] lb = new int[arr.length]; // next smallest element's index on left
         st = new Stack<>();
     
         st.push(0);
