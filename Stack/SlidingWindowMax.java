@@ -28,7 +28,7 @@ public class SlidingWindowMax {
         int k = 3; // size of subarray
         ArrayList<Integer> ans = maxSubArrayElement(arr, n, k);
         System.out.println(ans.toString());
-
+        
     }
 
     private static ArrayList<Integer> maxSubArrayElement(int[] arr, int n, int k) {
