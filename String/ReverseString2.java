@@ -2,11 +2,13 @@ public class ReverseString2 {
     public static void main(String[] args) {
         String s = "Nishit Popat";
 
-        reverse(s.toCharArray());
         
+        String ans = reverse(s.toCharArray());
+        
+        System.out.println(ans);
     }
 
-    private static void reverse(char[] s) {
+    private static String reverse(char[] s) {
         int n = s.length;
 
         //two pointer method
@@ -20,7 +22,8 @@ public class ReverseString2 {
             l++;
             h--;
         }
-        System.out.println(s);
+        //System.out.println(s);
+        return new String(s);   
         
     }
     

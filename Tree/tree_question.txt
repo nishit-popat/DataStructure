@@ -10,3 +10,17 @@ https://www.youtube.com/watch?v=9Oi3WamOCPo&list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2C
 3. Binary Tree Constructor :
 I have solved in this repo as well.
 https://www.youtube.com/watch?v=XV1ADVV6FbQ&list=PL-Jc9J83PIiHYxUk8dSu2_G7MR1PaGXN4&index=2
+
+
+
+
+
+
+
+
+Some Dynamic Programming problems:
+
+1. Count ways to reach nth stair :
+https://practice.geeksforgeeks.org/problems/count-ways-to-reach-the-nth-stair-1587115620/1#
+https://www.youtube.com/watch?v=A6mOASLl2Dg&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy&index=2
+
