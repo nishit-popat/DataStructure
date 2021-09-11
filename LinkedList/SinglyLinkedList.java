@@ -10,7 +10,7 @@ public class SinglyLinkedList {
         }
     }
 
-    public static class LinkedList{
+    public class LinkedList{
 
         Node head = null;
         Node tail = null;
@@ -170,8 +170,9 @@ public class SinglyLinkedList {
     }
 
     public static void main(String[] args) {
+        SinglyLinkedList l = new SinglyLinkedList();
         //System.out.println("hi");
-        LinkedList list = new LinkedList();
+        LinkedList list = l.new LinkedList();
         list.addLast(10);
         list.addLast(20);
         list.addLast(30);

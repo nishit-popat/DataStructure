@@ -12,7 +12,6 @@ Explanation:
 arr[0] + arr[1] = 1 + 5 = 6 
 and arr[1] + arr[3] = 5 + 1 = 6. 
 
-This better approach using map which I dont know now so understand it next time.
 
 */
 

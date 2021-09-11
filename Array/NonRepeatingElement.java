@@ -50,9 +50,9 @@ public class NonRepeatingElement {
         }
         System.out.println(map.toString());
 
-        for(Map.Entry<Integer, Integer> entry : map.entrySet()){
-            if(entry.getValue() == 1){
-                return entry.getKey();
+        for(int val : arr){
+            if(map.get(val) == 1){
+                return val;
             }
         }
         return 0;

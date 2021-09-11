@@ -39,11 +39,13 @@ public class FirstRepeatingElement{
         Set<Integer> s = new HashSet<>();
         int ans = -1;
         for(int i=(n-1); i>=0; i--){
-            if(s.contains(arr[i]))
+            if(s.contains(arr[i])){
                 ans = i+1;
+                return ans;
+            }
             else 
                 s.add(arr[i]);
         }
-        return ans;
+        return -1;
     }
 }

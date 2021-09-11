@@ -16,3 +16,4 @@ public class CyclyRotateByOne {
         System.out.print("Array after rotation by one : "+Arrays.toString(arr));
     }
 }
+
